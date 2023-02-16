@@ -3,9 +3,12 @@ import { CreateSpecificationController } from "./CreateSpecificationController";
 import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
 
 
+export default (): CreateSpecificationController => {
+    const specificationsRepository = new SpecificationRespository();
 
-const specificationsRepository = new SpecificationRespository();
+    const createSpecificationUseCase = new CreateSpecificationUseCase(specificationsRepository);
 
-const createSpecificationUseCase = new CreateSpecificationUseCase(specificationsRepository);
+    const createSpecificationController = new CreateSpecificationController(createSpecificationUseCase);
 
-export const createSpecificationController = new CreateSpecificationController(createSpecificationUseCase);
+    return createSpecificationController;
+}
