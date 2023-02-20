@@ -6,7 +6,7 @@ class SpecificationRespository implements ISpecificationsRepository {
     private repository: Repository<Specification>;
     
     constructor() {
-        this.repository = getRepository("specification");
+        this.repository = getRepository(Specification);
     }
     
     async create({ name, description }: ICreateSpecificationDTO): Promise<void> {

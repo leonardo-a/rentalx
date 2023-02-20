@@ -11,7 +11,7 @@ export class ImportCategoryController {
 
         await listCategoriesUseCase.execute(file);
 
-        return res.send();
+        return res.status(201).send();
     }
 
 }
