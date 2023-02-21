@@ -15,6 +15,10 @@ export class User {
     @Column()
     password: string;
     
+    
+    @Column()
+    email: string;
+    
     @Column()
     driver_license: string;
     
