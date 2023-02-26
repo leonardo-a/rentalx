@@ -8,8 +8,8 @@ import { router } from './routes';
 import swaggerFile from './swagger.json';
 
 import './database';
-import './shared/container';
-import { handleError } from "./errors/handleError";
+import '@shared/container';
+import { handleError } from "@errors/handleError";
 
 const app = express();
 
