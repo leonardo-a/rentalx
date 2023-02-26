@@ -26,6 +26,10 @@ export async function validateToken(request: Request, response: Response, next: 
         if(!user) {
             throw new AppError("User doesnt exist!", 401);
         }
+        
+        request.user = {
+            id: user_id
+        };
 
         next();
     } catch(err) {
