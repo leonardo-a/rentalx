@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { validateToken } from "middlewares/validateToken";
+import { validateToken } from "@shared/infra/http/middlewares/validateToken";
 import { CreateSpecificationController } from "@modules/cars/useCases/createSpecification/CreateSpecificationController";
 
 const specificationsRoutes = Router();
